@@ -6,7 +6,8 @@ except ImportError:
     print("No module found.")
 
 # query
-q = "Most watched Holdays movies in 2020"
+# q = "Most watched Holdays movies in 2020"
+q = "Films de vacances les plus regardés en 2020"
 
 # tld: top level domain
 # lan: language
@@ -16,5 +17,6 @@ q = "Most watched Holdays movies in 2020"
 # pause: lapse to wait between HTTP requests
 # Return: generator that yields four urls
 
-for i in search(q, tld="com", lang='en', num=10, stop=10, pause=2):
-    print(i)
+hits = [i for i in search(q, tld="com", lang='fr', num=10, stop=10, pause=2)]
+
+print(hits)
