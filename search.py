@@ -13,10 +13,10 @@ q = "Films de vacances les plus regardés en 2020"
 # lan: language
 # num: number of results wanted
 # start: first result to retrieve
-# stop: last result to retrieve
+# stop: last result to retrieve -- None would go forever
 # pause: lapse to wait between HTTP requests
 # Return: generator that yields four urls
 
-hits = [i for i in search(q, tld="com", lang='fr', num=10, stop=10, pause=2)]
+hits = [i for i in search(q, tld="com", lang='fr', num=100, stop=100, pause=2)]
 
 print(hits)
