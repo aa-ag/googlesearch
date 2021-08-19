@@ -5,5 +5,7 @@ Python script to perform a Google/Youtube searches.  Testing wheather those serv
 ### evn
 
 - `conda create -n googlesearch`
-- `conda install beautifulsoup4`
+- `conda install python`
+- `conda install -c anaconda beautifulsoup4`
+- `conda install requests`
 - `conda install google`
