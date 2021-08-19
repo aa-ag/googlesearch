@@ -1,4 +1,4 @@
-# ¯\_(ツ)_/¯ Moving Target
+# ¯/\/_(ツ)_/¯ Moving Target
 
 Python script to perform a Google/Youtube searches.  Testing wheather those services get confused and become unable to target/profile me.
 
