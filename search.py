@@ -28,8 +28,11 @@ import random
 
 ############------------ FUNCTION(S) ------------############
 def search_on():
-       text = input("What would you like to search for? ")
+       text = "Most watched Holdays movies in 2020"
+       # text = input("What would you like to search for? ")
+
        url = 'https://google.com/search?q=' + text
+       
        A = ("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36",
               "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.1 Safari/537.36",
               "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36",
@@ -38,6 +41,7 @@ def search_on():
        Agent = A[random.randrange(len(A))]
        
        headers = {'user-agent': Agent}
+
        r = requests.get(url, headers=headers)
        
        soup = BeautifulSoup(r.text, 'lxml')
@@ -48,4 +52,4 @@ def search_on():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    pass
+    search_on()
