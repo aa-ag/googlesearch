@@ -1,11 +1,9 @@
 ############------------ IMPORTS ------------############
-# https://pypi.org/project/google/
-import requests
-from bs4 import BeautifulSoup
-import random
+from selenium import webdriver
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
+url = 'https://www.google.com/'
 
 
 ############------------ FUNCTION(S) ------------############
@@ -15,7 +13,15 @@ def search_on():
         a random number of them and performs searches
         to confuse data-hungry search engines
        '''
-       pass
+       # hardcoding a word to search on googl
+       test_word = 'hello'
+
+       # creates a webdriver object to open the browser
+       # and perform an action in there
+       driver = webdriver.Firefox()
+
+       # get google.com page and perform the search
+       driver.get(url + 'search?q=' + test_word)
 
 
 ############------------ DRIVER CODE ------------############
