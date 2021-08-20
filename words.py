@@ -1,10 +1,9 @@
 ############------------ IMPORTS ------------############
-import bs4 
 import requests
-import pprint
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 words_list = 'http://www-personal.umich.edu/~jlawler/wordlist'
+
 
 ############------------ FUNCTION(S) ------------############
 def get_me_that_string():
