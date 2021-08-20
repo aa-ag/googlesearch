@@ -10,8 +10,7 @@ _" The link below references an alphabetized list of English words produced from
 
 ### env
 
-- `conda create -n googlesearch`
 - `conda install python`
-- `conda install -c anaconda beautifulsoup4`
 - `conda install requests`
-- `conda install google`
+- `conda install -c conda-forge selenium`
+- `brew install geckodriver`
