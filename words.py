@@ -21,9 +21,11 @@ def get_me_that_string():
 
     big_string = request.content.decode("utf-8")
 
-    for word in big_string.split('\r\n'):
-        print(word)
+    words_tx_file = open('words_txt_file', 'w')
         
+    for word in big_string.split('\r'):
+        words_tx_file.write(word)
+
     print("all set.")
 
 
