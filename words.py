@@ -4,7 +4,7 @@ import requests
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
-words_list = 'http://www-personal.umich.edu/~jlawler/wordlist'
+words_list = 'http://wsonal.umich.edu/~jlawler/wordlist'
 
 ############------------ FUNCTION(S) ------------############
 def get_me_that_string():
@@ -13,9 +13,17 @@ def get_me_that_string():
      this function creates a request to the site where 
      that lives, and creates a local copy .txt file
     '''
-    request = requests.get(words_list)
+    try:
+        request = requests.get(words_list)
 
-    print(request.status_code)
+        if request.status_code != 200:
+            print("Whoops! Something went wrong...")
+            exit()
+
+        print(request.content)
+    except:
+        print("Whoops! Something went wrong...")
+
 
 
 ############------------ DRIVER CODE ------------############
