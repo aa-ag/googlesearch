@@ -40,11 +40,11 @@ def generate_ten_random_numbers():
         helper function to generate ten random numbers 
         to use as indexes to slice wors in `search_on()`
        '''
-       pass
+       return random.sample(range(0, 69903), 10)
 
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
     # search_on()
 
-    generate_ten_random_numbers()
+    print(generate_ten_random_numbers())
