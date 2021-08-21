@@ -20,10 +20,10 @@ def search_on():
 
        words_file = open('words_file', 'r')
 
-       content = words_file.read()
+       content = words_file.read().splitlines()
 
        for line in content:
-              print(content)
+              print(line)
 
        # creates a webdriver object to open the browser
        # and perform an action in there
