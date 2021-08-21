@@ -22,8 +22,10 @@ def search_on():
 
        content = words_file.read().splitlines()
 
-       for line in content:
-              print(line)
+       words_list = [word for word in content if word != '']
+
+       print(len(words_list))
+       # 69903
 
        # creates a webdriver object to open the browser
        # and perform an action in there
