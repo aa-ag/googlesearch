@@ -24,7 +24,7 @@ def search_on():
 
        words_list = [word for word in content if word != '']
 
-       print(len(words_list))
+       # print(len(words_list))
        # 69903
 
        # creates a webdriver object to open the browser
@@ -35,6 +35,16 @@ def search_on():
        # driver.get(url + 'search?q=' + word)
 
 
+def generate_ten_random_numbers():
+       '''
+        helper function to generate ten random numbers 
+        to use as indexes to slice wors in `search_on()`
+       '''
+       pass
+
+
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    search_on()
+    # search_on()
+
+    generate_ten_random_numbers()
