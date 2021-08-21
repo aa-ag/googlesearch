@@ -1,9 +1,13 @@
 ############------------ IMPORTS ------------############
 from selenium import webdriver
-
+import settings
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 url = 'https://www.google.com/'
+
+path_to_words_file = settings.path_to_words_text_file
+
+print('--->' + path_to_words_file)
 
 
 ############------------ FUNCTION(S) ------------############
@@ -25,5 +29,5 @@ def search_on():
 
 
 ############------------ DRIVER CODE ------------############
-if __name__ == "__main__":
-    search_on()
+# if __name__ == "__main__":
+#     search_on()

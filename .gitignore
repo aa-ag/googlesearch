@@ -5,6 +5,10 @@ settings.py
 config
 config.py
 
+# words
+words_txt_file
+words_txt_file.txt
+
 # node_modules / blogify
 node_modules
 
