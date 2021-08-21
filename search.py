@@ -1,6 +1,7 @@
 ############------------ IMPORTS ------------############
 from selenium import webdriver
 import random
+import time
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
@@ -31,14 +32,21 @@ def search_on():
 
        ten_random_words = list(words_list[indx] for indx in ten_indexes)
 
-       print(ten_random_words)
+       # print(ten_random_words)
 
        # creates a webdriver object to open the browser
        # and perform an action in there
-       # driver = webdriver.Firefox()
+       driver = webdriver.Firefox()
 
-       # get google.com page and perform the search
-       # driver.get(url + 'search?q=' + word)
+       for _ in ten_random_words:
+
+              # get google.com page and perform the search
+              driver.get(url + 'search?q=' + _)
+              time.sleep(5)
+
+       ## TO DO: make number of seconds random too
+       ## TO DO: divide search_on() into 
+       # words and search functions
 
 
 def generate_ten_random_numbers():
