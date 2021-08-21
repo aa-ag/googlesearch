@@ -22,10 +22,16 @@ def search_on():
 
        content = words_file.read().splitlines()
 
-       words_list = [word for word in content if word != '']
+       words_list = list(word for word in content if word != '')
 
        # print(len(words_list))
        # 69903
+
+       ten_indexes = generate_ten_random_numbers()
+
+       ten_random_words = list(words_list[indx] for indx in ten_indexes)
+
+       print(ten_random_words)
 
        # creates a webdriver object to open the browser
        # and perform an action in there
@@ -45,6 +51,6 @@ def generate_ten_random_numbers():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    # search_on()
-
-    print(generate_ten_random_numbers())
+    search_on()
+    
+    # print(generate_ten_random_numbers())
