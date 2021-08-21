@@ -47,6 +47,8 @@ def search_on():
        ## TO DO: make number of seconds random too
        ## TO DO: divide search_on() into 
        # words and search functions
+       ## TO DO: add phrases to the bank/list of possible searches
+       # https://www.englishspeak.com/en/english-phrases?category_key=3
 
 
 def generate_ten_random_numbers():
