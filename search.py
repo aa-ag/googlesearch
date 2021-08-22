@@ -54,20 +54,24 @@ def search_on():
 
        random_words = list(words[indx] for indx in random_indexes)
 
-       print(random_words)
-
        # creates a webdriver object to open the browser
        # and perform an action in there
        # driver = webdriver.Firefox()
 
-       # for _ in ten_random_words:
+       for word in random_words:
+              # generate a random number of seconds up to 180
+              random_number_of_seconds = generate_random_number_of_seconds()
 
-       #        # get google.com page and perform the search
-       #        driver.get(url + 'search?q=' + _)
-       #        time.sleep(5)
+              print(word)
+              # get google.com page and perform the search
+              # driver.get(url + 'search?q=' + _)
+
+              # take a little breather to seem human
+              time.sleep(random_number_of_seconds)
 
        ## TO DO: add phrases to the bank/list of possible searches
        # https://www.englishspeak.com/en/english-phrases?category_key=3
+       ## cool to do: Type one letter at the time??
 
 
 
