@@ -58,9 +58,8 @@ def generate_up_to_ten_random_numbers():
         to use as indexes to slice wors in `search_on()`
        '''
        upper_limit = random.randint(1, 10)
-       return upper_limit
 
-       # return random.sample(range(0, 69903), 10)
+       return random.sample(range(0, 69903), upper_limit)
 
 
 ############------------ DRIVER CODE ------------############
