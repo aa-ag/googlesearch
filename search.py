@@ -9,6 +9,22 @@ url = 'https://www.google.com/'
 
 
 ############------------ FUNCTION(S) ------------############
+###--- HELPER FUNCTION(S) ---###
+def generate_up_to_ten_random_numbers():
+       '''
+        helper function to generate a random upper limit
+        to a random list of numbers
+        to use as indexes to slice wors in `search_on()`
+       '''
+       upper_limit = random.randint(1, 10)
+
+       return random.sample(range(0, 69903), upper_limit)
+
+
+def generate_random_number_of_seconds():
+       return random.randint(1, 180)
+
+###--- SEARCH FUNCTION(S) ---###
 def search_on():
        '''
         opens list of English words, iterates over
@@ -28,7 +44,7 @@ def search_on():
        # print(len(words_list))
        # 69903
 
-       ten_indexes = generate_ten_random_numbers()
+       ten_indexes = generate_up_to_ten_random_numbers()
 
        ten_random_words = list(words_list[indx] for indx in ten_indexes)
 
@@ -51,24 +67,8 @@ def search_on():
        # https://www.englishspeak.com/en/english-phrases?category_key=3
 
 
-def generate_up_to_ten_random_numbers():
-       '''
-        helper function to generate a random upper limit
-        to a random list of numbers
-        to use as indexes to slice wors in `search_on()`
-       '''
-       upper_limit = random.randint(1, 10)
-
-       return random.sample(range(0, 69903), upper_limit)
-
-
-def generate_random_number_of_seconds():
-       return random.randint(1, 180)
-
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
+    pass
     # search_on()
-    
-    # print(generate_up_to_ten_random_numbers())
-    print(generate_random_number_of_seconds())
