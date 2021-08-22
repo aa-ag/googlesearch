@@ -73,6 +73,8 @@ def search_on():
        # https://www.englishspeak.com/en/english-phrases?category_key=3
        ## cool to do: Type one letter at the time??
 
+       driver.close()
+       
        print("All done for now 😉")
 
 
