@@ -24,13 +24,7 @@ def generate_up_to_ten_random_numbers():
 def generate_random_number_of_seconds():
        return random.randint(1, 180)
 
-###--- SEARCH FUNCTION(S) ---###
-def search_on():
-       '''
-        opens list of English words, iterates over
-        a random number of them and performs searches
-        to confuse data-hungry search engines
-       '''
+def get_the_words_and_make_a_list():
        # open words file, create a list with them, 
        # create a range of N random indexes, slice the list
        # using those indexes to grab and print random words
@@ -44,25 +38,34 @@ def search_on():
        # print(len(words_list))
        # 69903
 
-       ten_indexes = generate_up_to_ten_random_numbers()
+       return words_list
 
-       ten_random_words = list(words_list[indx] for indx in ten_indexes)
 
-       # print(ten_random_words)
+###--- SEARCH FUNCTION(S) ---###
+def search_on():
+       '''
+        opens list of English words, iterates over
+        a random number of them and performs searches
+        to confuse data-hungry search engines
+       '''
+       words = get_the_words_and_make_a_list()
+
+       random_indexes = generate_up_to_ten_random_numbers()
+
+       random_words = list(words[indx] for indx in random_indexes)
+
+       print(random_words)
 
        # creates a webdriver object to open the browser
        # and perform an action in there
-       driver = webdriver.Firefox()
+       # driver = webdriver.Firefox()
 
-       for _ in ten_random_words:
+       # for _ in ten_random_words:
 
-              # get google.com page and perform the search
-              driver.get(url + 'search?q=' + _)
-              time.sleep(5)
+       #        # get google.com page and perform the search
+       #        driver.get(url + 'search?q=' + _)
+       #        time.sleep(5)
 
-       ## TO DO: make number of seconds random too
-       ## TO DO: divide search_on() into 
-       # words and search functions
        ## TO DO: add phrases to the bank/list of possible searches
        # https://www.englishspeak.com/en/english-phrases?category_key=3
 
@@ -70,5 +73,4 @@ def search_on():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    pass
-    # search_on()
+    search_on()
