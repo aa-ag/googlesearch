@@ -62,8 +62,13 @@ def generate_up_to_ten_random_numbers():
        return random.sample(range(0, 69903), upper_limit)
 
 
+def generate_random_number_of_seconds():
+       return random.randint(1, 180)
+
+
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
     # search_on()
     
-    print(generate_up_to_ten_random_numbers())
+    # print(generate_up_to_ten_random_numbers())
+    print(generate_random_number_of_seconds())
