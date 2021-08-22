@@ -51,16 +51,20 @@ def search_on():
        # https://www.englishspeak.com/en/english-phrases?category_key=3
 
 
-def generate_ten_random_numbers():
+def generate_up_to_ten_random_numbers():
        '''
-        helper function to generate ten random numbers 
+        helper function to generate a random upper limit
+        to a random list of numbers
         to use as indexes to slice wors in `search_on()`
        '''
-       return random.sample(range(0, 69903), 10)
+       upper_limit = random.randint(1, 10)
+       return upper_limit
+
+       # return random.sample(range(0, 69903), 10)
 
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    search_on()
+    # search_on()
     
-    # print(generate_ten_random_numbers())
+    print(generate_up_to_ten_random_numbers())
