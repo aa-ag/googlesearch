@@ -23,7 +23,11 @@ def generate_up_to_ten_random_numbers():
 
 
 def generate_random_number_of_seconds():
-       return random.randint(1, 180)
+       '''
+        generates a random int from 1 to 30
+       '''
+       return random.randint(1, 30)
+
 
 def get_the_words_and_make_a_list():
        # open words file, create a list with them, 
