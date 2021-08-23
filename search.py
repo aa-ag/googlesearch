@@ -80,6 +80,12 @@ def search_on():
               # scroll down
               driver.execute_script("window.scrollTo(0, 3000);")
 
+              # give the page 3 seconds to load
+              time.sleep(3)
+
+              # scroll further down
+              driver.execute_script("window.scrollTo(0, 6000);")
+
               # take a little breather to seem human
               time.sleep(random_number_of_seconds)
 
