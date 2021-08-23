@@ -74,6 +74,12 @@ def search_on():
               # get youtube.com page and perform the search
               driver.get(url + 'results?search_query=' + word)
 
+              # give the page 3 seconds to load
+              time.sleep(3)
+
+              # scroll down
+              driver.execute_script("window.scrollTo(0, 3000);")
+
               # take a little breather to seem human
               time.sleep(random_number_of_seconds)
 
