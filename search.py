@@ -86,6 +86,11 @@ def search_on():
               # scroll further down
               driver.execute_script("window.scrollTo(0, 6000);")
 
+              time.sleep(4)
+
+              # scroll up
+              driver.execute_script("window.scrollTo(0, 0);")
+
               # take a little breather to seem human
               time.sleep(random_number_of_seconds)
 
