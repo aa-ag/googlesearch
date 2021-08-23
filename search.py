@@ -5,7 +5,8 @@ import time
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
-url = 'https://www.google.com/'
+# url = 'https://www.google.com/'
+url = 'https://www.youtube.com/'
 
 
 ############------------ FUNCTION(S) ------------############
@@ -64,7 +65,10 @@ def search_on():
 
               # print(word)
               # get google.com page and perform the search
-              driver.get(url + 'search?q=' + word)
+              # driver.get(url + 'search?q=' + word)
+
+              # get youtube.com page and perform the search
+              driver.get(url + 'results?search_query=' + word)
 
               # take a little breather to seem human
               time.sleep(random_number_of_seconds)
