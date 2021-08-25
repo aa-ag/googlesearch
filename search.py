@@ -17,7 +17,9 @@ def generate_up_to_ten_random_numbers():
         to a random list of numbers
         to use as indexes to slice wors in `search_on()`
        '''
-       upper_limit = random.randint(1, 10)
+       # setting to 3 for now to make testing faster
+       # might change in "prod"
+       upper_limit = random.randint(1, 4)
 
        return random.sample(range(0, 69903), upper_limit)
 
@@ -57,7 +59,7 @@ def search_on():
 
        random_indexes = generate_up_to_ten_random_numbers()
 
-       random_words = list(words[indx] for indx in random_indexes)
+       random_words = list(words[indx:indx+1] for indx in random_indexes)
 
        # creates a webdriver object to open the browser
        # and perform an action in there
