@@ -26,7 +26,7 @@ def generate_up_to_ten_random_numbers():
 
 def generate_random_number_of_seconds():
        '''
-        generates a random int from 1 to 30
+        generates a random int from 1 to 5
        '''
        return random.randint(1, 5)
 
