@@ -21,7 +21,7 @@ def generate_up_to_ten_random_numbers():
        # might change in "prod"
        upper_limit = random.randint(1, 4)
 
-       return random.sample(range(0, 69903), upper_limit)
+       return random.sample(range(0, 69902), upper_limit)
 
 
 def generate_random_number_of_seconds():
