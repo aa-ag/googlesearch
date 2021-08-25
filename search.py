@@ -28,7 +28,7 @@ def generate_random_number_of_seconds():
        '''
         generates a random int from 1 to 30
        '''
-       return random.randint(1, 30)
+       return random.randint(1, 5)
 
 
 def get_the_words_and_make_a_list():
@@ -59,7 +59,7 @@ def search_on():
 
        random_indexes = generate_up_to_ten_random_numbers()
 
-       random_words = list(words[indx:indx+1] for indx in random_indexes)
+       random_words = list(' '.join(words[indx:indx+2]) for indx in random_indexes)
 
        # creates a webdriver object to open the browser
        # and perform an action in there
