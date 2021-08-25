@@ -94,7 +94,7 @@ def search_on():
               driver.execute_script("window.scrollTo(0, 0);")
 
               # take a little breather to seem human
-              time.sleep(random_number_of_seconds)
+              time.sleep(random_number_of_seconds - 0.66)
 
        ## TO DO: add phrases to the bank/list of possible searches
        ## cool to do: Type one letter at the time
