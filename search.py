@@ -75,18 +75,18 @@ def search_on():
               driver.get(url + 'results?search_query=' + word)
 
               # give the page 3 seconds to load
-              time.sleep(3)
+              time.sleep(random_number_of_seconds + 0.33)
 
               # scroll down
               driver.execute_script("window.scrollTo(0, 3000);")
 
               # give the page 3 seconds to load
-              time.sleep(3)
+              time.sleep(random_number_of_seconds - 0.33)
 
               # scroll further down
               driver.execute_script("window.scrollTo(0, 6000);")
 
-              time.sleep(4)
+              time.sleep(random_number_of_seconds + 0.66)
 
               # scroll up
               driver.execute_script("window.scrollTo(0, 0);")
@@ -95,8 +95,8 @@ def search_on():
               time.sleep(random_number_of_seconds)
 
        ## TO DO: add phrases to the bank/list of possible searches
-       # https://www.englishspeak.com/en/english-phrases?category_key=3
-       ## cool to do: Type one letter at the time??
+       ## cool to do: Type one letter at the time
+       ## cool to do: Translate into other languages via API
 
        driver.close()
        
