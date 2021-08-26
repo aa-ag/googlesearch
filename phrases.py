@@ -27,21 +27,17 @@ def get_phrases():
 
     soup = BeautifulSoup(content, 'html.parser')
 
-    # print(soup.prettify())
-
-    # print(soup.title)
-
     list_of_unordered_lists = soup.find_all('ul')
 
-    list_of_strings = list()
+    txt_file = open('phrases_file', 'w')
 
     for unordered_list in list_of_unordered_lists[5:16]:
         for list_item in unordered_list.text.split('\n'):
             list_item_as_a_string = list_item.replace(u'\xa0', u' ')
             if list_item_as_a_string != '':
-                list_of_strings.append(list_item_as_a_string)
+                txt_file.write(list_item_as_a_string + '\n')
             
-    print(list_of_strings)
+    print("all set")
 
 
 ############------------ DRIVER CODE ------------############
