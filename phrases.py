@@ -35,10 +35,8 @@ def get_phrases():
 
     # print(len(list_of_unordered_lists))
 
-    for i, ul in enumerate(list_of_unordered_lists[5:16]):
-        print('\n\n\n')
-        print(i)
-        print(ul)
+    for ul in list_of_unordered_lists[5:16]:
+        print(ul.text)
 
 
 ############------------ DRIVER CODE ------------############
