@@ -35,11 +35,11 @@ def get_phrases():
 
     # print(len(list_of_unordered_lists))
 
-    for i, ul in enumerate(list_of_unordered_lists):
+    for i, ul in enumerate(list_of_unordered_lists[5:16]):
         print('\n\n\n')
         print(i)
         print(ul)
-        print('\n\n\n')
+
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
