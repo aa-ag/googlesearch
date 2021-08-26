@@ -27,7 +27,9 @@ def get_phrases():
 
     soup = BeautifulSoup(page, 'html.parser')
 
-    print(soup.prettify())
+    # print(soup.prettify())
+
+    print(soup.title)
 
 
 ############------------ DRIVER CODE ------------############
