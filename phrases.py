@@ -8,7 +8,8 @@ import requests
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
-url = 'https://www.englishspeak.com/en/english-phrases?category_key=1'
+url = 'https://grammarvocab.com/1000-most-common-english-phrases-with-pdf/'
+
 
 ############------------ FUNCTION(S) ------------############
 def get_phrases():
@@ -17,8 +18,13 @@ def get_phrases():
      create a local copy with all 
      for later use
     '''
-    pass
+    request = requests.get(url)
+
+    if request.status_code == 200:
+        return "200"
+    return "Something's not right"
+
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    pass
+    print(get_phrases())
