@@ -11,7 +11,7 @@ url = 'https://www.youtube.com/'
 
 ############------------ FUNCTION(S) ------------############
 ###--- HELPER FUNCTION(S) ---###
-def generate_up_to_ten_random_numbers():
+def generate_random_numbers():
        '''
         helper function to generate a random upper limit
         to a random list of numbers
@@ -57,7 +57,7 @@ def search_on():
        '''
        words = get_the_words_and_make_a_list()
 
-       random_indexes = generate_up_to_ten_random_numbers()
+       random_indexes = generate_random_numbers()
 
        random_words = list(' '.join(words[indx:indx+2]) for indx in random_indexes)
 
