@@ -48,6 +48,19 @@ def get_the_words_and_make_a_list():
        return words_list
 
 
+def get_the_phrases_and_make_a_list():
+       phrases_file = open('phrases_file', 'r')
+
+       content = phrases_file.read().splitlines()
+
+       phrases_list = list(phrase for phrase in content if phrase)
+
+       print(len(phrases_list))
+       # 240
+
+       # return phrases_list
+
+
 ###--- SEARCH FUNCTION(S) ---###
 def search_on():
        '''
@@ -55,54 +68,56 @@ def search_on():
         a random number of them and performs searches
         to confuse data-hungry search engines
        '''
-       words = get_the_words_and_make_a_list()
+       # words = get_the_words_and_make_a_list()
 
-       random_indexes = generate_random_numbers()
+       phrases = get_the_phrases_and_make_a_list()
 
-       random_words = list(' '.join(words[indx:indx+2]) for indx in random_indexes)
+       # random_indexes = generate_random_numbers()
 
-       # creates a webdriver object to open the browser
-       # and perform an action in there
-       driver = webdriver.Firefox()
+       # random_words = list(' '.join(words[indx:indx+2]) for indx in random_indexes)
 
-       for word in random_words:
-              # generate a random number of seconds up to 180
-              random_number_of_seconds = generate_random_number_of_seconds()
+       # # creates a webdriver object to open the browser
+       # # and perform an action in there
+       # driver = webdriver.Firefox()
 
-              # print(word)
-              # get google.com page and perform the search
-              # driver.get(url + 'search?q=' + word)
+       # for word in random_words:
+       #        # generate a random number of seconds up to 180
+       #        random_number_of_seconds = generate_random_number_of_seconds()
 
-              # get youtube.com page and perform the search
-              driver.get(url + 'results?search_query=' + word)
+       #        # print(word)
+       #        # get google.com page and perform the search
+       #        # driver.get(url + 'search?q=' + word)
 
-              # give the page 3 seconds to load
-              time.sleep(random_number_of_seconds + 0.33)
+       #        # get youtube.com page and perform the search
+       #        driver.get(url + 'results?search_query=' + word)
 
-              # scroll down
-              driver.execute_script("window.scrollTo(0, 3000);")
+       #        # give the page 3 seconds to load
+       #        time.sleep(random_number_of_seconds + 0.33)
 
-              # give the page 3 seconds to load
-              time.sleep(random_number_of_seconds - 0.33)
+       #        # scroll down
+       #        driver.execute_script("window.scrollTo(0, 3000);")
 
-              # scroll further down
-              driver.execute_script("window.scrollTo(0, 6000);")
+       #        # give the page 3 seconds to load
+       #        time.sleep(random_number_of_seconds - 0.33)
 
-              time.sleep(random_number_of_seconds + 0.66)
+       #        # scroll further down
+       #        driver.execute_script("window.scrollTo(0, 6000);")
 
-              # scroll up
-              driver.execute_script("window.scrollTo(0, 0);")
+       #        time.sleep(random_number_of_seconds + 0.66)
 
-              # take a little breather to seem human
-              time.sleep(random_number_of_seconds - 0.66)
+       #        # scroll up
+       #        driver.execute_script("window.scrollTo(0, 0);")
 
-       ## TO DO: add phrases to the bank/list of possible searches
-       ## cool to do: Type one letter at the time
-       ## cool to do: Translate into other languages via API
+       #        # take a little breather to seem human
+       #        time.sleep(random_number_of_seconds - 0.66)
 
-       driver.close()
+       # ## TO DO: add phrases to the bank/list of possible searches
+       # ## cool to do: Type one letter at the time
+       # ## cool to do: Translate into other languages via API
+
+       # driver.close()
        
-       print("All done for now 😉")
+       # print("All done for now 😉")
 
 
 
