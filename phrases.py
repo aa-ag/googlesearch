@@ -29,6 +29,13 @@ def get_phrases():
 
     list_of_unordered_lists = soup.find_all('ul')
 
+    return list_of_unordered_lists
+
+
+def write_phrases():
+
+    list_of_unordered_lists = get_phrases()
+
     txt_file = open('phrases_file', 'w')
 
     for unordered_list in list_of_unordered_lists[5:16]:
@@ -42,4 +49,6 @@ def get_phrases():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    get_phrases()
+    # get_phrases()
+
+    write_phrases()
