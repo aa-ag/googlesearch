@@ -23,15 +23,19 @@ def get_phrases():
     if request.status_code != 200:
         return "Something's not right"
 
-    page = request.content
+    content = request.content
 
-    soup = BeautifulSoup(page, 'html.parser')
+    soup = BeautifulSoup(content, 'html.parser')
 
     # print(soup.prettify())
 
-    print(soup.title)
+    # print(soup.title)
+    list_of_unordered_lists = soup.find_all('ul')
+
+    print(len(list_of_unordered_lists))
 
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
     get_phrases()
+    # 17
