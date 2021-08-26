@@ -33,13 +33,17 @@ def get_phrases():
 
     list_of_unordered_lists = soup.find_all('ul')
 
-    # print(len(list_of_unordered_lists))
+    list_of_strings = list()
 
-    for ul in list_of_unordered_lists[5:16]:
-        print(ul.text)
+    for unordered_list in list_of_unordered_lists[5:16]:
+        for list_item in unordered_list.text.split('\n'):
+            list_item_as_a_string = list_item.replace(u'\xa0', u' ')
+            if list_item_as_a_string != '':
+                list_of_strings.append(list_item_as_a_string)
+            
+    print(list_of_strings)
 
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
     get_phrases()
-    # 17
