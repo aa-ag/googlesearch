@@ -80,46 +80,46 @@ def search_on():
 
        # creates a webdriver object to open the browser
        # and perform an action in there
-       # driver = webdriver.Firefox()
+       driver = webdriver.Firefox()
 
        for natural_language in random_phrases:
               # generate a random number of seconds up to 180
               random_number_of_seconds = generate_random_number_of_seconds()
 
-              print(natural_language)
+              # print(natural_language)
               # get google.com page and perform the search
-              # driver.get(url + 'search?q=' + word)
+              driver.get(url + 'search?q=' + natural_language)
 
               # get youtube.com page and perform the search
-       #        driver.get(url + 'results?search_query=' + word)
+              driver.get(url + 'results?search_query=' + natural_language)
 
-       #        # give the page 3 seconds to load
-       #        time.sleep(random_number_of_seconds + 0.33)
+              # give the page 3 seconds to load
+              time.sleep(random_number_of_seconds + 0.33)
 
-       #        # scroll down
-       #        driver.execute_script("window.scrollTo(0, 3000);")
+              # scroll down
+              driver.execute_script("window.scrollTo(0, 3000);")
 
-       #        # give the page 3 seconds to load
-       #        time.sleep(random_number_of_seconds - 0.33)
+              # give the page 3 seconds to load
+              time.sleep(random_number_of_seconds - 0.33)
 
-       #        # scroll further down
-       #        driver.execute_script("window.scrollTo(0, 6000);")
+              # scroll further down
+              driver.execute_script("window.scrollTo(0, 6000);")
 
-       #        time.sleep(random_number_of_seconds + 0.66)
+              time.sleep(random_number_of_seconds + 0.66)
 
-       #        # scroll up
-       #        driver.execute_script("window.scrollTo(0, 0);")
+              # scroll up
+              driver.execute_script("window.scrollTo(0, 0);")
 
-       #        # take a little breather to seem human
-       #        time.sleep(random_number_of_seconds - 0.66)
+              # take a little breather to seem human
+              time.sleep(random_number_of_seconds - 0.66)
 
-       # ## TO DO: add phrases to the bank/list of possible searches
-       # ## cool to do: Type one letter at the time
-       # ## cool to do: Translate into other languages via API
+       ## TO DO: add phrases to the bank/list of possible searches
+       ## cool to do: Type one letter at the time
+       ## cool to do: Translate into other languages via API
 
-       # driver.close()
+       driver.close()
        
-       # print("All done for now 😉")
+       print("All done for now 😉")
 
 
 
