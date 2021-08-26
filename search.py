@@ -21,7 +21,8 @@ def generate_random_numbers():
        # might change in "prod"
        upper_limit = random.randint(1, 4)
 
-       return random.sample(range(0, 69902), upper_limit)
+       # return random.sample(range(0, 69902), upper_limit)
+       return random.sample(range(0, 241), upper_limit)
 
 
 def generate_random_number_of_seconds():
@@ -55,10 +56,10 @@ def get_the_phrases_and_make_a_list():
 
        phrases_list = list(phrase for phrase in content if phrase)
 
-       print(len(phrases_list))
+       # print(len(phrases_list))
        # 240
 
-       # return phrases_list
+       return phrases_list
 
 
 ###--- SEARCH FUNCTION(S) ---###
@@ -72,23 +73,24 @@ def search_on():
 
        phrases = get_the_phrases_and_make_a_list()
 
-       # random_indexes = generate_random_numbers()
+       random_indexes = generate_random_numbers()
 
        # random_words = list(' '.join(words[indx:indx+2]) for indx in random_indexes)
+       random_phrases = list(' '.join(phrases[indx:indx+2]) for indx in random_indexes)
 
-       # # creates a webdriver object to open the browser
-       # # and perform an action in there
+       # creates a webdriver object to open the browser
+       # and perform an action in there
        # driver = webdriver.Firefox()
 
-       # for word in random_words:
-       #        # generate a random number of seconds up to 180
-       #        random_number_of_seconds = generate_random_number_of_seconds()
+       for natural_language in random_phrases:
+              # generate a random number of seconds up to 180
+              random_number_of_seconds = generate_random_number_of_seconds()
 
-       #        # print(word)
-       #        # get google.com page and perform the search
-       #        # driver.get(url + 'search?q=' + word)
+              print(natural_language)
+              # get google.com page and perform the search
+              # driver.get(url + 'search?q=' + word)
 
-       #        # get youtube.com page and perform the search
+              # get youtube.com page and perform the search
        #        driver.get(url + 'results?search_query=' + word)
 
        #        # give the page 3 seconds to load
