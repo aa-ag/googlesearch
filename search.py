@@ -3,6 +3,9 @@ from selenium import webdriver
 import random
 import time
 
+## TO DO: merge words & phrases logic to do one OR the other
+## cool to do: Type one letter at the time
+## cool to do: Translate into other languages via API
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 # url = 'https://www.google.com/'
@@ -113,12 +116,10 @@ def search_on():
               # take a little breather to seem human
               time.sleep(random_number_of_seconds - 0.66)
 
-       ## TO DO: add phrases to the bank/list of possible searches
-       ## cool to do: Type one letter at the time
-       ## cool to do: Translate into other languages via API
-
+       # close the browser
        driver.close()
        
+       # let user know that the progam has finished executing
        print("All done for now 😉")
 
 
