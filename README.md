@@ -14,3 +14,4 @@ _" The link below references an alphabetized list of English words produced from
 - `conda install requests`
 - `conda install -c conda-forge selenium`
 - `brew install geckodriver`
+- `pip install googletrans`
